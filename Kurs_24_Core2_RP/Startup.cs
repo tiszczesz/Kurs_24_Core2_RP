@@ -9,6 +9,8 @@ using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.EntityFrameworkCore;
+using Kurs_24_Core2_RP.Models;
 
 namespace Kurs_24_Core2_RP
 {
@@ -33,6 +35,9 @@ namespace Kurs_24_Core2_RP
 
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
+
+            services.AddDbContext<Kurs_24_Core2_RPContext>(options =>
+                    options.UseSqlServer(Configuration.GetConnectionString("Kurs_24_Core2_RPContext")));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
