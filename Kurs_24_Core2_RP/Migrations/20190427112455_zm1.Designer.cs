@@ -4,14 +4,16 @@ using Kurs_24_Core2_RP.Models;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace Kurs_24_Core2_RP.Migrations
 {
     [DbContext(typeof(Kurs_24_Core2_RPContext))]
-    partial class Kurs_24_Core2_RPContextModelSnapshot : ModelSnapshot
+    [Migration("20190427112455_zm1")]
+    partial class zm1
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
